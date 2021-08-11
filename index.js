@@ -64,7 +64,7 @@ server.post("/curso", (req, res) => {
 
     //  2.  Verificacion de parametros
     if (req.body.queryResult.parameters) {
-        console.log("parametros: " + req.body.queryResult.parameters);
+        console.log("parametros: " , req.body.queryResult.parameters);
         textoEnviar = textoEnviar + " y el parametro es prueba: " + req.body.queryResult.parameters;
     }
     else {
