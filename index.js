@@ -149,7 +149,7 @@ server.post("/curso", (req, res) => {
             resultado = LibreriaSGG.respuestaBasica(textoEnviar);
         } else if (!discoduro) {
             textoEnviar = "Ahora veremos el almacenamiento en disco:";
-            opciones = ["1 Tb", "2 Tb", "4 Tb"];
+            opciones = ["1-tb", "2-tb", "4-tb"];
             resultado = LibreriaSGG.respuestaBasica(textoEnviar);
         } else if (!marcapc) {
             textoEnviar = "Vamos a ver que marca te gustaría consultar:";
