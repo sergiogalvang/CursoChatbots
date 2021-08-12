@@ -145,7 +145,7 @@ server.post("/curso", (req, res) => {
             resultado = LibreriaSGG.respuestaBasica(textoEnviar);
         } else if (!memoria) {
             textoEnviar = "Es necesario elegir el tamaño de la memoria:";
-            opciones = ["8-gb", "16-gb"];
+            opciones = ["8-gb", "16-gb", "4-gb","32-gb"];
             resultado = LibreriaSGG.respuestaBasica(textoEnviar);
         } else if (!discoduro) {
             textoEnviar = "Ahora veremos el almacenamiento en disco:";
