@@ -141,7 +141,7 @@ server.post("/curso", (req, res) => {
         // LLenar las variables que esten vacias, le preguntamos al usuario
         if (!tipopc) {
             textoEnviar = "Que tipo de dispositivo te gustaría elegir:";
-            opciones = ["sobremesa", "portatiles"];
+            opciones = ["sobremesa", "portatil"];
             resultado = LibreriaSGG.respuestaBasica(textoEnviar);
         } else if (!memoria) {
             textoEnviar = "Es necesario elegir el tamaño de la memoria:";
