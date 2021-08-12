@@ -87,9 +87,9 @@ server.post("/curso", (req, res) => {
             console.log("Error personaje no leido" + error);
         }
         if (personaje) {
-            let arListaPersonajes = Object.keys(global.listaPersonajes);
+            let arListaPersonajes = Object.keys(global.listaPersonajes).slice();
             //Vamos a personalizar las opciones para que aparezcan como sugerencias: otros personajes y el menu
-            opciones = arListaPersonajes.slice();
+            opciones = arListaPersonajes;
             opciones.unshift("menu");
             // si ha llegado parametro personaje y esta en la lista de nuestro archivo
             if (global.listaPersonajes[personaje]) {
@@ -111,9 +111,9 @@ server.post("/curso", (req, res) => {
 
     //5.  Listado de personajes
     else if (contexto === "lista_personajes") {
-        let arListaPersonajes = Object.keys(global.listaPersonajes);
+        let arListaPersonajes = Object.keys(global.listaPersonajes).slice();
         //Vamos a personalizar las opciones para que aparezcan como sugerencias: otros personajes y el menu
-        opciones = arListaPersonajes.slice();
+        opciones = arListaPersonajes;
         opciones.unshift("menu");
         resultado = LibreriaSGG.respuestaBasica("Te muestro algunos personajes que conozco...");
     }
